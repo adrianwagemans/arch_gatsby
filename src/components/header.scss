@@ -1,0 +1,29 @@
+@use './styles/base.scss';
+
+.header {
+    display: flex;
+    justify-content: left;
+}
+nav {
+    
+
+    ul{
+        display: flex;
+        justify-content: space-between;
+        min-width: 33vw;
+        padding-left: 10vw;
+
+        .link{ 
+           
+            font-size: 18px;
+            color:base.$mediumGrey;
+            font-weight: base.$fontBold;
+            text-decoration: none;
+            margin-top: 10px;
+            height: 25px;
+
+            
+            
+        }
+    }
+}

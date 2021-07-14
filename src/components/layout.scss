@@ -1,0 +1,18 @@
+*{
+    font-family: 'Spartan';
+}
+
+.main{
+    margin: 2vh auto;
+    max-width: 78vw;
+
+    display:flex;
+    flex-direction: column;
+    min-height: 96vh;
+
+}
+
+.mainContent{
+    flex-grow: 1;
+ 
+}
