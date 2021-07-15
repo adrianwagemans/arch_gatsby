@@ -1,0 +1,50 @@
+@use './base.scss';
+
+h1{
+    color:base.$verylightGrey ;
+    font-size: 200px;
+    font-weight: 700;
+
+
+}
+
+h2{
+    color:base.$darkBlue;
+    font-size: 56px;
+    font-weight: 700;
+    padding-right: 10px;
+    margin-bottom:50px;
+
+}
+p{
+    line-height: 25px;
+    font-size: 15px;
+    font-weight: 400;
+
+}
+
+
+.welcomeSection {
+    height: 1000px;
+    .welcomeImage {
+        position: relative;
+        bottom:100px;
+        left:12.5vw;
+        z-index:-100;
+        width: 24vw;
+
+
+    }
+    
+    
+}
+.welcomeWraper{
+    display: flex;
+
+}
+.welcomeContent {
+    max-width: 450px;
+    min-width: 400px;
+    margin-left:15%;
+
+}
