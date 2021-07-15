@@ -1,0 +1,63 @@
+@use '../components/styles/base.scss';
+
+
+footer{
+    display: flex;
+    
+    
+    .footerLogoContainer{
+        display: flex;
+        background-color: black;
+        justify-content: center;
+        align-items: center;
+        min-height: 200px;
+        min-width: 200px;
+    }
+
+}
+
+
+.footerLinksCont{
+    background-color: base.$verylightGrey;
+    width: 70%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 200px;
+    
+
+    ul{
+        display: flex;
+        justify-content: space-evenly;
+        min-width: 50%;
+
+        .link{ 
+           
+            font-size: 18px;
+            color:base.$mediumGrey;
+            font-weight: base.$fontBold;
+            text-decoration: none;
+            margin-top: 10px;
+            height: 25px;
+
+            
+            
+        }
+    }
+    .buttonFooter {
+            position: relative;
+            left:125px;
+            padding: 25px;
+            background-color: base.$darkBlue;
+            font-size: 18px;
+            color:base.$mediumGrey;
+            font-weight: base.$fontBold;
+            text-decoration: none;
+            margin-top: 10px;
+            height: 25px;
+            color: white;
+    
+    }
+}   
+
