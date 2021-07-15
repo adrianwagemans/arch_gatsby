@@ -4,6 +4,10 @@ h1{
     color:base.$verylightGrey ;
     font-size: 200px;
     font-weight: 700;
+    position: absolute;
+    top:950px;
+
+
 
 
 }
@@ -17,21 +21,21 @@ h2{
 
 }
 p{
-    line-height: 25px;
-    font-size: 15px;
+    line-height: 30px;
+    font-size: 20px;
     font-weight: 400;
+    padding-bottom:25px;
+    color:base.$darkGrey
 
 }
 
 
 .welcomeSection {
-    height: 1000px;
+    margin:30vh 0;
+    
     .welcomeImage {
-        position: relative;
-        bottom:100px;
-        left:12.5vw;
         z-index:-100;
-        width: 24vw;
+        
 
 
     }
@@ -40,6 +44,8 @@ p{
 }
 .welcomeWraper{
     display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 
 }
 .welcomeContent {
