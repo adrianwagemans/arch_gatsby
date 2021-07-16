@@ -4,6 +4,7 @@ import {StaticImage } from 'gatsby-plugin-image'
 import Layout from "../components/layout"
 import '../components/layout'
 import Slider from "../components/slider"
+import Button from '../components/button'
 
 
 const IndexPage = ({data}) => {
@@ -40,7 +41,7 @@ const IndexPage = ({data}) => {
                     </p>
                     </div>
 
-                      < StaticImage className='welcomeImage' width={500} src='../images/home/desktop/image-welcome.jpg' />
+                      < StaticImage className='welcomeImage' width={450} src='../images/home/desktop/image-welcome.jpg' />
           
                   
               
@@ -48,15 +49,20 @@ const IndexPage = ({data}) => {
                 
             </section>
 
-
-              <div>
-
-                          
+            <section>
+              <div className='smallContent'>
+                <h2>
+                  Small team,
+                   </h2>
+                   <h2>
+                     big ideas
+                    </h2> 
+               
+               <Button buttonContent={'About Us'} buttonLink={'/about'} buttonClass={'buttonSmall'}/>
               </div>
-              <div>
-
-                          
-              </div>
+              
+            < StaticImage className='smallImage' width={1440} src='../images/home/desktop/image-small-team.jpg' />
+            </section>
 
       </Layout>
   )

@@ -1,5 +1,16 @@
 @use './base.scss';
 
+.welcomeSection {
+    margin:30vh 0;
+    
+    .welcomeImage {
+        z-index:-100;
+        
+
+    }
+    
+    
+
 h1{
     color:base.$verylightGrey ;
     font-size: 200px;
@@ -21,30 +32,21 @@ h2{
 
 }
 p{
-    line-height: 30px;
+    line-height: 25px;
     font-size: 20px;
     font-weight: 400;
-    padding-bottom:25px;
+    padding-bottom:20px;
     color:base.$darkGrey
 
 }
 
 
-.welcomeSection {
-    margin:30vh 0;
-    
-    .welcomeImage {
-        z-index:-100;
-        
 
-
-    }
-    
     
 }
 .welcomeWraper{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-end;
 
 }
@@ -53,4 +55,47 @@ p{
     min-width: 400px;
     margin-left:15%;
 
+}
+
+.buttonSmall{
+
+            width: 130px;
+            padding: 25px;
+            background-color: base.$darkBlue;
+            font-size: 18px;
+            color:base.$mediumGrey;
+            font-weight: base.$fontBold;
+            text-decoration: none;
+            margin-top: 10px;
+            height: 25px;
+            color: white;
+}
+
+.smallContent{
+
+
+    position: relative;
+    top:450px;
+    left:10%;
+    z-index: 100;
+
+    h2{
+    color:white;
+    font-size: 56px;
+    font-weight: 700;
+    padding-right: 10px;
+    margin-bottom:50px;
+    line-height: 0.5;
+
+    }
+
+    img{
+        opacity:0.5
+    }
+    
+}
+
+.smallImage {
+    background-color: black;
+    opacity: 0.8;
 }
