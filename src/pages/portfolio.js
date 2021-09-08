@@ -5,7 +5,7 @@ import PortfolioItem from '../components/PortfolioItem';
 const portfolioPage = () => {
   return (
     <Layout>
-      <div className={'portItem'}>
+      <div className={'portWraper'}>
         <PortfolioItem />
       </div>
     </Layout>

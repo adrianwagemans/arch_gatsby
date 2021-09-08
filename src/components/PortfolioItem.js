@@ -22,7 +22,7 @@ const PortfolioItem = ({ portImage, portDate, portTitle }) => {
   const images = data.allContentfulProject.edges.map((edge) => {
     const image = getImage(edge.node.image);
     return (
-      <div  className='imageDiv'>
+      <div className='imageDiv'>
         <h3>{edge.node.title}</h3>
         <p>{edge.node.creationDate}</p>
         <div>

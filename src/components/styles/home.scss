@@ -138,9 +138,12 @@
   height: 25px;
   color: white;
 }
-.portItem {
-  display: inline-flex;
+.portWraper {
   text-align: center;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 8%;
   .imageDiv {
     margin: 25px;
   }
@@ -167,6 +170,8 @@
 
 .portImage {
   z-index: 5;
+  display: inline-block;
+  height: 600px;
 }
 
 .aboutHero {
@@ -279,6 +284,32 @@
       }
     }
   }
+}
+.contactDetails {
+  display: flex;
+  justify-content: space-around;
+  margin: 15% 0;
+  min-width: 30%;
+  p {
+    line-height: 2;
+
+    font-size: 17px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    color: base.$darkGrey;
+    max-width: 100%;
+  }
+  h2 {
+    color: base.$darkBlue;
+    font-size: 38px;
+    font-weight: 700;
+    max-width: 110px;
+  }
+}
+.map {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15%;
 }
 
 //media queries
