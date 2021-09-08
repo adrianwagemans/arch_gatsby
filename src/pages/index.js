@@ -1,11 +1,11 @@
 import React from 'react';
-import { graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/layout';
 import '../components/layout';
 import Slider from '../components/slider';
 import Button from '../components/button';
 import Image from '../components/WelcomeImage';
+import FeatureShow from '../components/FeatureShow';
 
 const IndexPage = ({ data }) => {
   return (
@@ -13,10 +13,9 @@ const IndexPage = ({ data }) => {
       <Slider />
 
       <section className='welcomeSection'>
-        <h1>Welcome</h1>
-
         <div className='welcomeWraper'>
           <div className='welcomeContent'>
+            <h1>Welcome</h1>
             <h2>Welcome to Arch Studio</h2>
             <p>
               We have a unique network and skillset to help bring your projects
@@ -68,6 +67,9 @@ const IndexPage = ({ data }) => {
             buttonLink={'/portfolio'}
             buttonClass={'buttonFeatured'}
           />
+        </div>
+        <div className='portItem'>
+          <FeatureShow />
         </div>
       </section>
     </Layout>

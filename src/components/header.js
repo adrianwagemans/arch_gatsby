@@ -7,7 +7,7 @@ const header = () => {
   return (
     <header className='header'>
       <Link to='/'>
-        <StaticImage src='../images/logo.svg' width={80} alt='logo' />
+        <StaticImage src='../images/logo.svg' alt='logo' />
       </Link>
 
       <nav>

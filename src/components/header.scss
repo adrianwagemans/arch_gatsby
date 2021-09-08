@@ -3,6 +3,8 @@
 .header {
   display: flex;
   justify-content: left;
+  align-items: center;
+  min-height: 150px;
 }
 nav {
   ul {

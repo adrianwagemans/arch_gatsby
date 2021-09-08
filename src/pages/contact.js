@@ -1,16 +1,13 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import Layout from '../components/layout';
+import Contact from '../components/Contact';
 
 const contactPage = () => {
   return (
     <Layout>
-      <div>
-        <p>contact</p>
-        <p>
-          llamame mono<Link to='/about'>click aca</Link>
-        </p>
-      </div>
+      <>
+        <Contact />
+      </>
     </Layout>
   );
 };

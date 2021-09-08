@@ -1,18 +1,51 @@
 @use './base.scss';
 
+.sliderContainer {
+  position: relative;
+
+  .slideSelector {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    left: -90px;
+  }
+  .slideImage {
+    width: 90px;
+    height: 90px;
+    background-color: white;
+    display: flex;
+    color: grey;
+
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      font-weight: 800;
+    }
+    &:hover {
+      background-color: grey;
+      color: white;
+    }
+  }
+}
+
 .welcomeSection {
   margin-top: 30vh;
 
   .welcomeImage {
     z-index: -100;
+    min-width: 370px;
   }
 
   h1 {
     color: base.$verylightGrey;
     font-size: 200px;
-    font-weight: 700;
+    font-weight: 800;
+    max-width: 90%;
     position: absolute;
-    top: 950px;
+    top: -40%;
+    left: -10%;
+    z-index: 15;
   }
 
   h2 {
@@ -23,7 +56,7 @@
     margin-bottom: 50px;
   }
   p {
-    line-height: 25px;
+    line-height: 1.5;
     font-size: 20px;
     font-weight: 400;
     padding-bottom: 20px;
@@ -32,13 +65,14 @@
 }
 .welcomeWraper {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-end;
 }
 .welcomeContent {
-  max-width: 450px;
-  min-width: 400px;
-  margin-left: 15%;
+  max-width: 40%;
+  min-width: 25%;
+  margin-left: 10%;
+  position: relative;
 }
 
 .buttonSmall {
@@ -104,6 +138,163 @@
   height: 25px;
   color: white;
 }
-.portImg {
-  display: inline-block;
+.portItem {
+  display: inline-flex;
+  text-align: center;
+  .imageDiv {
+    margin: 25px;
+  }
+
+  h3 {
+    top: 75%;
+    font-size: 1.5rem;
+
+    color: white;
+    position: relative;
+    z-index: 10;
+    -webkit-text-stroke: 0.5px grey;
+  }
+
+  p {
+    top: 80%;
+    line-height: 1.5;
+    color: white;
+    position: relative;
+    z-index: 10;
+    -webkit-text-stroke: 0.5px darkgray;
+  }
+}
+
+.portImage {
+  z-index: 5;
+}
+
+.aboutHero {
+  position: relative;
+  .aboutHeroContent {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    bottom: 0;
+    right: 200px;
+    background-color: white;
+    width: 45%;
+    min-height: 380px;
+    height: 45%;
+    padding: 5%;
+  }
+
+  img {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    color: base.$verylightGrey;
+    font-size: 150px;
+    font-weight: 800;
+    max-width: 80%;
+    position: absolute;
+    top: 22%;
+    left: 35%;
+
+    z-index: 15;
+  }
+
+  h2 {
+    color: base.$darkBlue;
+    font-size: 38px;
+    font-weight: 700;
+
+    margin-bottom: 50px;
+    max-width: 70%;
+  }
+  p {
+    line-height: 1.5;
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 20px;
+    color: base.$darkGrey;
+    max-width: 70%;
+  }
+}
+
+.heritageWraper {
+  display: flex;
+  justify-content: space-around;
+  margin: 20% 0;
+  .heritagecontent {
+    width: 30%;
+    h2 {
+      color: base.$darkBlue;
+      font-size: 38px;
+      font-weight: 700;
+
+      margin-bottom: 50px;
+    }
+    p {
+      line-height: 1.5;
+
+      font-size: 17px;
+      font-weight: 400;
+      padding-bottom: 20px;
+      color: base.$darkGrey;
+      max-width: 100%;
+    }
+  }
+}
+.leadersSection {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10%;
+
+  h2 {
+    color: base.$darkBlue;
+    font-size: 38px;
+    font-weight: 700;
+    max-width: 110px;
+  }
+
+  .leadersWraper {
+    width: 70%;
+
+    .leaderItem {
+      width: 250px;
+      display: inline-block;
+      margin: 0 2%;
+      h4 {
+        padding-top: 20px;
+      }
+      p {
+        line-height: 1.5;
+
+        font-size: 15px;
+        font-weight: 400;
+        padding-bottom: 20px;
+        color: base.$darkGrey;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+//media queries
+
+@media only screen and (max-width: 850px) {
+  .portItem {
+    flex-direction: column;
+    p {
+      top: 50vh;
+      left: 28%;
+      color: blanchedalmond;
+      position: relative;
+    }
+  }
+  .portImage {
+    min-width: 90%;
+    z-index: -1;
+  }
 }

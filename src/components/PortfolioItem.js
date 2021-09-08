@@ -4,27 +4,30 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const PortfolioItem = ({ portImage, portDate, portTitle }) => {
   const data = useStaticQuery(graphql`
-    {
-      allFile(filter: { relativeDirectory: { eq: "portfolio/desktop" } }) {
+    query MyQuery {
+      allContentfulProject {
         edges {
           node {
-            name
-            childImageSharp {
+            title
+            creationDate
+            image {
               gatsbyImageData
+              id
             }
           }
         }
       }
     }
   `);
-  const images = data.allFile.edges.map((edge) => {
-    const image = getImage(edge.node);
+  const images = data.allContentfulProject.edges.map((edge) => {
+    const image = getImage(edge.node.image);
     return (
-      <div className={'portImg'}>
-        <p>{portDate}</p>
-        <p>{portTitle}</p>
-
-        <GatsbyImage image={image} />
+      <div  className='imageDiv'>
+        <h3>{edge.node.title}</h3>
+        <p>{edge.node.creationDate}</p>
+        <div>
+          <GatsbyImage className='portImage' image={image} />
+        </div>
       </div>
     );
   });

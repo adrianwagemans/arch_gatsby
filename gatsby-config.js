@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://www.yourdomain.tld',
@@ -7,6 +11,14 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-image',
     'gatsby-transformer-sharp',
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `z9pz2yn706em`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
 
     {
       resolve: `gatsby-plugin-google-fonts`,
@@ -18,6 +30,7 @@ module.exports = {
         display: 'swap',
       },
     },
+
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
