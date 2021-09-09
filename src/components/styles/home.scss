@@ -1,11 +1,53 @@
 @use './base.scss';
 
+h1 {
+  color: base.$verylightGrey;
+  font-size: 150px;
+  font-weight: 800;
+  max-width: 80%;
+  position: absolute;
+  top: 22%;
+  left: 35%;
+
+  z-index: 15;
+}
+
+h2 {
+  color: base.$darkBlue;
+  font-size: 56px;
+  font-weight: 700;
+
+  margin-bottom: 50px;
+  max-width: 70%;
+}
+h3 {
+  top: 75%;
+  font-size: 1.5rem;
+
+  color: white;
+  position: relative;
+  z-index: 10;
+  -webkit-text-stroke: 0.5px grey;
+}
+h4 {
+  padding-top: 20px;
+}
+p {
+  line-height: 1.5;
+  font-size: 20px;
+  font-weight: 400;
+  padding-bottom: 20px;
+  color: base.$darkGrey;
+  max-width: 70%;
+}
+
 .sliderContainer {
   position: relative;
 
   .slideSelector {
     position: absolute;
     display: flex;
+
     bottom: 0;
     left: -90px;
   }
@@ -21,11 +63,17 @@
     align-items: center;
     h2 {
       font-weight: 800;
+      font-size: 15px;
+      margin-bottom: 0;
     }
     &:hover {
       background-color: grey;
       color: white;
     }
+  }
+  .primera,
+  .segunda {
+    background-color: black;
   }
 }
 
@@ -38,29 +86,15 @@
   }
 
   h1 {
-    color: base.$verylightGrey;
     font-size: 200px;
-    font-weight: 800;
-    max-width: 90%;
+
     position: absolute;
     top: -40%;
     left: -10%;
-    z-index: 15;
   }
 
   h2 {
-    color: base.$darkBlue;
-    font-size: 56px;
-    font-weight: 700;
     padding-right: 10px;
-    margin-bottom: 50px;
-  }
-  p {
-    line-height: 1.5;
-    font-size: 20px;
-    font-weight: 400;
-    padding-bottom: 20px;
-    color: base.$darkGrey;
   }
 }
 .welcomeWraper {
@@ -96,8 +130,6 @@
 
   h2 {
     color: white;
-    font-size: 56px;
-    font-weight: 700;
     padding-right: 10px;
     margin-bottom: 50px;
     line-height: 0.5;
@@ -117,11 +149,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 15vh;
+
+  margin-top: 15vh;
 
   h2 {
-    color: base.$darkBlue;
-    font-size: 56px;
     font-weight: 700;
     padding-right: 10px;
   }
@@ -160,11 +191,11 @@
 
   p {
     top: 80%;
-    line-height: 1.5;
     color: white;
     position: relative;
     z-index: 10;
     -webkit-text-stroke: 0.5px darkgray;
+    max-width: 100;
   }
 }
 
@@ -196,35 +227,6 @@
     margin: 0;
     padding: 0;
   }
-
-  h1 {
-    color: base.$verylightGrey;
-    font-size: 150px;
-    font-weight: 800;
-    max-width: 80%;
-    position: absolute;
-    top: 22%;
-    left: 35%;
-
-    z-index: 15;
-  }
-
-  h2 {
-    color: base.$darkBlue;
-    font-size: 38px;
-    font-weight: 700;
-
-    margin-bottom: 50px;
-    max-width: 70%;
-  }
-  p {
-    line-height: 1.5;
-    font-size: 20px;
-    font-weight: 400;
-    padding-bottom: 20px;
-    color: base.$darkGrey;
-    max-width: 70%;
-  }
 }
 
 .heritageWraper {
@@ -234,19 +236,9 @@
   .heritagecontent {
     width: 30%;
     h2 {
-      color: base.$darkBlue;
-      font-size: 38px;
-      font-weight: 700;
-
       margin-bottom: 50px;
     }
     p {
-      line-height: 1.5;
-
-      font-size: 17px;
-      font-weight: 400;
-      padding-bottom: 20px;
-      color: base.$darkGrey;
       max-width: 100%;
     }
   }
@@ -257,9 +249,6 @@
   margin-bottom: 10%;
 
   h2 {
-    color: base.$darkBlue;
-    font-size: 38px;
-    font-weight: 700;
     max-width: 110px;
   }
 
@@ -267,19 +256,11 @@
     width: 70%;
 
     .leaderItem {
-      width: 250px;
+      width: 350px;
       display: inline-block;
       margin: 0 2%;
-      h4 {
-        padding-top: 20px;
-      }
-      p {
-        line-height: 1.5;
 
-        font-size: 15px;
-        font-weight: 400;
-        padding-bottom: 20px;
-        color: base.$darkGrey;
+      p {
         max-width: 100%;
       }
     }
@@ -293,16 +274,10 @@
   p {
     line-height: 2;
 
-    font-size: 17px;
-    font-weight: 400;
     padding-bottom: 10px;
-    color: base.$darkGrey;
     max-width: 100%;
   }
   h2 {
-    color: base.$darkBlue;
-    font-size: 38px;
-    font-weight: 700;
     max-width: 110px;
   }
 }
@@ -311,13 +286,71 @@
   justify-content: center;
   margin-bottom: 15%;
 }
+.contactContainer {
+  display: flex;
+  justify-content: space-around;
+  h2 {
+    max-width: 25%;
+  }
+}
+.form {
+  min-width: 50vw;
+  position: relative;
+  margin-bottom: 150px;
+  p {
+    margin-top: 15px;
+    padding-bottom: 0;
+  }
+
+  button {
+    border: none;
+    margin-top: 0;
+    position: absolute;
+    bottom: -68px;
+    right: 28%;
+  }
+  .buttonFeatured {
+    width: 50px;
+    padding: 25px;
+    background-color: base.$darkBlue;
+    font-size: 18px;
+    color: base.$mediumGrey;
+    font-weight: base.$fontBold;
+    text-decoration: none;
+    margin-top: 0;
+    height: 25px;
+    color: white;
+    text-align: left;
+    justify-self: end;
+  }
+  input {
+    width: 100%;
+    height: 25px;
+    background: none;
+    padding-top: 20px;
+    border: none;
+    border-bottom: 2px solid grey;
+  }
+  textarea {
+    width: 100%;
+    height: 100px;
+    background: none;
+    padding-top: 20px;
+    border: none;
+    border-bottom: 2px solid grey;
+  }
+}
 
 //media queries
 
 @media only screen and (max-width: 850px) {
+  p {
+    font-size: 15px;
+  }
+
   .portItem {
-    flex-direction: column;
     p {
+      font-size: 15px;
       top: 50vh;
       left: 28%;
       color: blanchedalmond;

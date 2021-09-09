@@ -24,24 +24,37 @@ export const Slider = () => {
 
   const image = data.allFile.edges[images].node;
 
-  console.log(image);
   return (
     <div className='sliderContainer'>
       <div className='slideSelector'>
-        <div className='slideImage' onClick={() => setImages(0)}>
-          <h2>01</h2>
+        <div
+          className={'slideImage'}
+          onClick={() => {
+            setImages(0);
+          }}
+        >
+          <h4>01</h4>
         </div>
-        <div className='slideImage' onClick={() => setImages(1)}>
-          <h2>02</h2>
+        <div
+          className='slideImage'
+          onClick={() => {
+            setImages(1);
+          }}
+        >
+          <h4>02</h4>
         </div>
         <div className='slideImage' onClick={() => setImages(2)}>
-          <h2>02</h2>
+          <h4>03</h4>
         </div>
         <div className='slideImage' onClick={() => setImages(3)}>
-          <h2>03</h2>
+          <h4>04</h4>
         </div>
       </div>
-      <GatsbyImage image={getImage(image)} alt='towae' />;
+      <GatsbyImage
+        image={getImage(image)}
+        alt={data.allFile.edges[images].name}
+      />
+      ;
     </div>
   );
 };

@@ -8,6 +8,7 @@ const FeatureShow = ({ portImage, portDate, portTitle }) => {
       allContentfulProject {
         edges {
           node {
+            featured
             title
             creationDate
             image {
@@ -20,16 +21,19 @@ const FeatureShow = ({ portImage, portDate, portTitle }) => {
     }
   `);
   const images = data.allContentfulProject.edges.map((edge) => {
-    const image = getImage(edge.node.image);
-    return (
-      <div className='imageDiv'>
-        <h3>{edge.node.title}</h3>
-        <p>{edge.node.creationDate}</p>
-        <div>
-          <GatsbyImage className='portImage' image={image} />
+    if (edge.node.featured) {
+      const image = getImage(edge.node.image);
+
+      return (
+        <div className='imageDiv'>
+          <h3>{edge.node.title}</h3>
+          <p>{edge.node.creationDate}</p>
+          <div>
+            <GatsbyImage className='portImage' image={image} />
+          </div>
         </div>
-      </div>
-    );
+      );
+    }
   });
   return images;
 };

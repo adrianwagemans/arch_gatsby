@@ -68,7 +68,7 @@ const IndexPage = ({ data }) => {
             buttonClass={'buttonFeatured'}
           />
         </div>
-        <div className='portItem'>
+        <div className={'portWraper'}>
           <FeatureShow />
         </div>
       </section>

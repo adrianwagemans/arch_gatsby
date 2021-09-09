@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import Contact from '../components/Contact';
 import { StaticImage } from 'gatsby-plugin-image';
+import ContactForm from '../components/ContactForm';
 
 const contactPage = () => {
   return (
@@ -32,6 +33,10 @@ const contactPage = () => {
           width={1200}
           height={600}
         />
+      </div>
+      <div className='contactContainer'>
+        <h2>Connect with us</h2>
+        <ContactForm />
       </div>
     </Layout>
   );
