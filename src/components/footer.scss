@@ -8,8 +8,8 @@ footer {
     background-color: black;
     justify-content: center;
     align-items: center;
-    min-height: 200px;
-    min-width: 200px;
+    min-height: 8vh;
+    min-width: 15%;
   }
 }
 
@@ -25,7 +25,7 @@ footer {
   ul {
     display: flex;
     justify-content: space-evenly;
-    min-width: 50%;
+    min-width: 60%;
 
     .link {
       font-size: 18px;

@@ -10,7 +10,11 @@ const About = ({ page }) => {
           text
         }
         image {
-          gatsbyImageData
+          gatsbyImageData(
+            width: 800
+            placeholder: BLURRED
+            formats: [AUTO, WEBP]
+          )
         }
         title
         subtitle

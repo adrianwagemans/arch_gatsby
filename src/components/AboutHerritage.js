@@ -27,7 +27,7 @@ const AboutHerritage = () => {
           alt='empire'
           placeholder='blurred'
           layout='constrained'
-          width={500}
+          width={400}
           height={600}
         />
       </div>
