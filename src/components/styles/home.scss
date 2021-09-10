@@ -303,7 +303,7 @@ p {
     width: 70%;
 
     .leaderItem {
-      width: 350px;
+      width: 300px;
       display: inline-block;
       margin: 0 2%;
 
@@ -554,6 +554,10 @@ p {
   }
   .aboutHero {
     position: relative;
+    .gatsby-image-wrapper-constrained {
+      display: flex;
+      justify-content: center;
+    }
     h1 {
       position: absolute;
       left: 10%;
@@ -577,18 +581,17 @@ p {
       P {
         font-size: 15px;
         line-height: 1.3;
-        max-width: 90%;
+        max-width: 70%;
       }
       h2 {
-        max-width: 90%;
+        max-width: 70%;
       }
     }
 
     img {
       position: absolute;
-      margin: 0;
-      padding: 0;
-      width: 100%;
+
+      max-width: 100vw;
     }
   }
 
@@ -772,10 +775,14 @@ p {
 
   .aboutHero {
     position: relative;
+    display: block;
+    margin-bottom: 500px;
+    .gatsby-image-wrapper-constrained {
+      display: block;
+    }
+
     h1 {
-      position: static;
-      left: 10%;
-      top: 40%;
+      display: none;
     }
 
     .aboutHeroContent {
@@ -784,11 +791,11 @@ p {
       flex-direction: column;
       justify-content: flex-end;
       align-items: flex-end;
-      bottom: 0;
-      right: 200px;
+      bottom: -300px;
+      right: 7%;
       background-color: white;
-      width: 55%;
-      min-height: 380px;
+      width: 85%;
+      min-height: 280px;
       height: 50%;
       padding: 5%;
 
@@ -810,12 +817,29 @@ p {
     }
   }
 
+  #gatsby-focus-wrapper
+    > div
+    > div
+    > div.heritageWraper
+    > div.heritageImg
+    > div
+    > div
+    > img {
+    display: none;
+    position: absolute;
+    height: 0;
+  }
   .heritageWraper {
-    display: flex;
+    display: block;
     justify-content: space-around;
     margin: 20% 0;
+
+    img {
+      display: none;
+      position: absolute;
+    }
     .heritagecontent {
-      width: 45%;
+      width: 85%;
       margin: 5%;
       h2 {
         margin-bottom: 50px;
@@ -824,6 +848,10 @@ p {
         max-width: 100%;
       }
     }
+  }
+  .leadersSection {
+    display: block;
+    margin: 0 0 0 20vw;
   }
   .contactDetails {
     display: flex;
