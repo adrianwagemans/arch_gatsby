@@ -213,7 +213,7 @@ p {
   justify-content: center;
   margin-bottom: 8%;
   .imageDiv {
-    margin: 0;
+    margin: 0 20px;
   }
 
   h3 {
@@ -232,7 +232,7 @@ p {
     position: relative;
     z-index: 10;
     -webkit-text-stroke: 0.5px darkgray;
-    max-width: 100;
+    max-width: 100%;
   }
 }
 
@@ -720,6 +720,7 @@ p {
   .portImage {
     min-width: 90%;
     z-index: -1;
+    margin: 0;
   }
 
   .welcomeSection {
