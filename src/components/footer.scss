@@ -50,3 +50,30 @@ footer {
     color: white;
   }
 }
+@media only screen and(max-width: 850px) {
+  .footerLinksCont {
+    background-color: base.$verylightGrey;
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100px;
+
+    ul {
+      display: none;
+    }
+    .buttonFooter {
+      left: 105px;
+      padding: 25px;
+      background-color: base.$darkBlue;
+      font-size: 14px;
+      color: base.$mediumGrey;
+      font-weight: base.$fontBold;
+      text-decoration: none;
+      margin-top: 10px;
+      height: 25px;
+      color: white;
+    }
+  }
+}

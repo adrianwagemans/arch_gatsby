@@ -14,3 +14,12 @@
 .mainContent {
   flex-grow: 1;
 }
+
+@media only screen and(max-width: 1350px) {
+  .main {
+    overflow: hidden;
+    margin: 25px 0;
+    max-width: 100vw;
+    display: block;
+  }
+}
