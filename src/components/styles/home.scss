@@ -853,11 +853,15 @@ p {
       }
     }
   }
+
   .contactDetails {
-    display: flex;
+    display: block;
     justify-content: space-evenly;
-    margin: 15% 0;
+    margin: 15% 10%;
     min-width: 35%;
+    div {
+      margin-bottom: 50px;
+    }
     p {
       font-size: 15px;
       line-height: 2;
@@ -868,6 +872,11 @@ p {
     h2 {
       font-size: 21px;
       max-width: 110px;
+      margin-bottom: 50px;
     }
+  }
+  .contactContainer {
+    display: block;
+    margin: 10%;
   }
 }
