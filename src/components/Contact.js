@@ -17,7 +17,6 @@ const Contact = ({ page }) => {
       }
     }
   `);
-  console.log(contact.contentfulAboutContactArch.text.text);
 
   return (
     <div className='aboutHero'>

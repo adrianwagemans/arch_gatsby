@@ -17,7 +17,7 @@ const Image = ({ name, alt }) => {
       }
     }
   `);
-  console.log(data);
+
   return <GatsbyImage image={getImage(data.file)} alt={alt ?? ''} />;
 };
 

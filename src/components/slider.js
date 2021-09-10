@@ -21,6 +21,7 @@ export const Slider = () => {
       }
     }
   `);
+
   const [images, setImages] = useState(0);
 
   const image = data.allFile.edges[images].node;
@@ -52,7 +53,7 @@ export const Slider = () => {
         </div>
       </div>
       <div className='sliderContent'>
-        <h1>Seraph Station</h1>
+        <h1>{'dadad'}</h1>
 
         <p>
           The Seraph Station project challenged us to design a unique station
@@ -65,11 +66,7 @@ export const Slider = () => {
           buttonClass={'buttonSmall'}
         />
       </div>
-      <GatsbyImage
-        image={getImage(image)}
-        alt={data.allFile.edges[images].name}
-      />
-      ;
+      <GatsbyImage image={getImage(image)} alt={'tower'} />;
     </div>
   );
 };

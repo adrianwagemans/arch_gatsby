@@ -206,6 +206,16 @@ p {
   height: 25px;
   color: white;
 }
+.featWraper {
+  text-align: center;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-bottom: 8%;
+  .imageDiv {
+    margin: 0 4%;
+  }
+}
 .portWraper {
   text-align: center;
   display: inline-flex;
@@ -213,7 +223,7 @@ p {
   justify-content: center;
   margin-bottom: 8%;
   .imageDiv {
-    margin: 0 20px;
+    margin: 0 3%;
   }
 
   h3 {
@@ -704,6 +714,17 @@ p {
       }
     }
   }
+  .featWraper {
+    text-align: center;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 8%;
+    .imageDiv {
+      margin: 0 4%;
+    }
+  }
+
   .featuredContent {
     display: block;
   }
@@ -720,7 +741,6 @@ p {
   .portImage {
     min-width: 90%;
     z-index: -1;
-    margin: 0;
   }
 
   .welcomeSection {

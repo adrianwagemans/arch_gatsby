@@ -21,7 +21,7 @@ const About = ({ page }) => {
       }
     }
   `);
-  console.log(about);
+
   return (
     <div className='aboutHero'>
       <GatsbyImage image={getImage(about.contentfulAboutContactArch.image)} />
