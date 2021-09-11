@@ -1,7 +1,9 @@
-import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
+import NavMobile from './nav/NavMobile';
+import Navigation from './nav/Navigation';
 import './header.scss';
+import { Link } from 'gatsby';
 
 const header = () => {
   return (
@@ -11,29 +13,8 @@ const header = () => {
       </Link>
 
       <nav>
-        <ul>
-          <li>
-            <h3>
-              <Link className='link' to='/about'>
-                about
-              </Link>
-            </h3>
-          </li>
-          <li>
-            <h3>
-              <Link className='link' to='/portfolio'>
-                portfolio
-              </Link>
-            </h3>
-          </li>
-          <li>
-            <h3>
-              <Link className='link' to='/contact'>
-                contact
-              </Link>
-            </h3>
-          </li>
-        </ul>
+        <Navigation />
+        <NavMobile />
       </nav>
     </header>
   );

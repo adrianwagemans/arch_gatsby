@@ -7,6 +7,9 @@
   min-height: 150px;
 }
 nav {
+  .MobileNavigation {
+    display: none;
+  }
   ul {
     display: flex;
     justify-content: space-between;
@@ -23,5 +26,20 @@ nav {
     }
   }
 }
+@media (max-width: 850px) {
+  nav {
+    .Navigation {
+      display: none;
+    }
+    .MobileNavigation {
+      display: flex;
 
-
+      align-items: center;
+    }
+    .burguer {
+      position: absolute;
+      right: 5%;
+      cursor: pointer;
+    }
+  }
+}
