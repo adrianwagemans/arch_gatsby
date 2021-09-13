@@ -22,7 +22,7 @@ const Leaders = () => {
   const leaderItem = data.allContentfulLeaders.edges.map((edge) => {
     return (
       <div className='leaderItem'>
-        <GatsbyImage image={getImage(edge.node.image)} />
+        <GatsbyImage image={getImage(edge.node.image)} alt={edge.node.name} />
         <h4>{edge.node.name}</h4>
         <p>{edge.node.job}</p>
       </div>

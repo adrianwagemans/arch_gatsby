@@ -20,7 +20,10 @@ const Contact = ({ page }) => {
 
   return (
     <div className='aboutHero'>
-      <GatsbyImage image={getImage(contact.contentfulAboutContactArch.image)} />
+      <GatsbyImage
+        image={getImage(contact.contentfulAboutContactArch.image)}
+        alt={contact.contentfulAboutContactArch.title}
+      />
       <h1>{contact.contentfulAboutContactArch.title}</h1>
       <div className='aboutHeroContent'>
         <h2>{contact.contentfulAboutContactArch.subtitle}</h2>

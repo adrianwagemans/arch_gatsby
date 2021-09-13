@@ -5,6 +5,7 @@
   justify-content: left;
   align-items: center;
   min-height: 150px;
+  margin-left: 2%;
 }
 nav {
   .MobileNavigation {
@@ -40,6 +41,24 @@ nav {
       position: absolute;
       right: 5%;
       cursor: pointer;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      position: absolute;
+      height: 330px;
+      width: 65%;
+      right: 18%;
+      top: 18%;
+      background-color: grey;
+      z-index: 25;
+      opacity: 0.9;
+      border-radius: 8px;
+      .link {
+        color: white;
+      }
     }
   }
 }

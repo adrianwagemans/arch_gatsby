@@ -51,6 +51,9 @@ footer {
   }
 }
 @media only screen and(max-width: 850px) {
+  .footerLogoContainer {
+    padding: 20px;
+  }
   .footerLinksCont {
     background-color: base.$verylightGrey;
     width: 50%;
@@ -64,7 +67,7 @@ footer {
       display: none;
     }
     .buttonFooter {
-      left: 105px;
+      left: 20%;
       padding: 25px;
       background-color: base.$darkBlue;
       font-size: 14px;

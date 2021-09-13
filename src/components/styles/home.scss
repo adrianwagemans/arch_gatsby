@@ -648,7 +648,8 @@ p {
   .sliderContainer {
     .buttonSmall {
       width: 100px;
-      padding: 20px;
+      padding: 35px;
+      text-align: center;
       background-color: base.$darkBlue;
       font-size: 15px;
       color: base.$mediumGrey;
@@ -656,6 +657,7 @@ p {
       text-decoration: none;
       margin-top: 10px;
       height: 23px;
+      line-height: 1.2;
       color: white;
     }
     .sliderContent {

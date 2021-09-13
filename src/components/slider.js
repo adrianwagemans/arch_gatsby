@@ -5,16 +5,15 @@ import Button from '../components/button';
 
 export const Slider = () => {
   const data = useStaticQuery(graphql`
-    {
-      allFile(filter: { relativeDirectory: { eq: "home/desktop/slider" } }) {
+    query SLIDER {
+      allContentfulSlider {
         edges {
           node {
-            childImageSharp {
-              gatsbyImageData(
-                width: 1500
-                placeholder: BLURRED
-                formats: [AUTO, WEBP, AVIF]
-              )
+            id
+            image {
+              description
+              title
+              gatsbyImageData(layout: FULL_WIDTH)
             }
           }
         }
@@ -24,7 +23,7 @@ export const Slider = () => {
 
   const [images, setImages] = useState(0);
 
-  const image = data.allFile.edges[images].node;
+  const image = data.allContentfulSlider.edges[images].node.image;
 
   return (
     <div className='sliderContainer'>
@@ -53,20 +52,16 @@ export const Slider = () => {
         </div>
       </div>
       <div className='sliderContent'>
-        <h1>{'dadad'}</h1>
+        <h1>{image.title}</h1>
 
-        <p>
-          The Seraph Station project challenged us to design a unique station
-          that would transport people through time. The result is a fresh and
-          futuristic model inspired by space stations.
-        </p>
+        <p>{image.description}</p>
         <Button
           buttonContent={'See Our Portfolio'}
           buttonLink={'/portfolio'}
           buttonClass={'buttonSmall'}
         />
       </div>
-      <GatsbyImage image={getImage(image)} alt={'tower'} />;
+      <GatsbyImage image={getImage(image)} alt={image.title} />;
     </div>
   );
 };

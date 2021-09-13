@@ -36,7 +36,7 @@ const IndexPage = ({ data }) => {
             </p>
           </div>
 
-          <Image alt={'sdasd'} name={'image-welcome'} />
+          <Image alt={'building image'} name={'image-welcome'} />
         </div>
       </section>
 
@@ -56,6 +56,7 @@ const IndexPage = ({ data }) => {
           className='smallImage'
           width={1440}
           src='../images/home/desktop/image-small-team.jpg'
+          alt='building site'
         />
       </section>
 

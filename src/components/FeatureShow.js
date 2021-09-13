@@ -25,11 +25,15 @@ const FeatureShow = ({ portImage, portDate, portTitle }) => {
       const image = getImage(edge.node.image);
 
       return (
-        <div className='imageDiv'>
+        <div className='imageDiv' key={edge.node.image.id}>
           <h3>{edge.node.title}</h3>
           <p>{edge.node.creationDate}</p>
           <div>
-            <GatsbyImage className='portImage' image={image} />
+            <GatsbyImage
+              className='portImage'
+              image={image}
+              alt={edge.node.title}
+            />
           </div>
         </div>
       );

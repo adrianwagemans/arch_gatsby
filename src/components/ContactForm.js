@@ -28,7 +28,7 @@ const ContactForm = () => {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'contact', ...formState }),
     })
-      .then(() => alert('Success!'))
+      .then(() => alert('Thanks for contact us '))
       .catch((error) => alert(error));
 
     e.preventDefault();
@@ -78,7 +78,11 @@ const ContactForm = () => {
         </p>
 
         <button type='submit'>
-          <Button buttonContent={''} buttonClass={'buttonFeatured'} />{' '}
+          <Button
+            buttonLink={''}
+            buttonContent={''}
+            buttonClass={'buttonFeatured'}
+          />{' '}
         </button>
       </form>
     </div>
